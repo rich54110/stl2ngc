@@ -92,7 +92,7 @@ void SetColor(int ForgC)
 void SetColor(int ForgC)
 {
     // dummy function 
-};
+}
 
 #endif
 
@@ -195,7 +195,9 @@ int main(int argc, char* argv[]) {
     FILE* fp;
     bool nameset = true;
     string filename2;
+#ifdef _MSC_VER 	
     errno_t err;
+#endif
     double d_org = 2.0;
     int feedRate = 200;
     int spindleSpeed = 500;
@@ -311,7 +313,8 @@ int main(int argc, char* argv[]) {
         help();
     }
 #else
-    if (fp = fopen(argv[argc - 1], "r"))
+	fp = fopen(argv[argc - 1], "r");
+    if (fp)
     {
         fclose(fp);
     }
