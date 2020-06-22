@@ -23,9 +23,11 @@ sudo make install
 ```
 
 To convert ```example.stl``` to ```example.ngc``` run:
-```bash
-cat example.stl | stl2ngc > example.ngc
-```
+stl2ngc example.stl
+ Or
+ stl2ngc.exe --zsafe 15.00 --overlap 0.25 --xplain 0.0 --yplain 0.0 --zplain 0.0 --outfile example_fine.ngc -resize 0.0 --feed 200 --spindle 500  --zstep 50  --toollen 6.0 --tooldia 2.0 --threads 2 example.stl
+ 
+ 
 
 ### Demo
 
@@ -34,12 +36,10 @@ See [Wiki](../../wiki/).
 ### FAQ
 
 * This is an early release, expect errors and missing features.
-  
-  Please [fork](https://github.com/koppi/stl2ngc/network) the repo.
 
 * No Gui? - Yes, only command-line for now.
 
 ### Authors
 
-* [Jakob Flierl](https://github.com/koppi)
+* [Richard Rehll](https://github.com/rich54110)
 
