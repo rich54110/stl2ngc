@@ -23,10 +23,11 @@ sudo make install
 ```
 
 To convert ```example.stl``` to ```example.ngc``` run:
-stl2ngc example.stl
+```
+ stl2ngc example.stl
  Or
  stl2ngc.exe --zsafe 15.00 --overlap 0.25 --xplain 0.0 --yplain 0.0 --zplain 0.0 --outfile example_fine.ngc -resize 0.0 --feed 200 --spindle 500  --zstep 50  --toollen 6.0 --tooldia 2.0 --threads 2 example.stl
- 
+```
  
 
 ### Demo
